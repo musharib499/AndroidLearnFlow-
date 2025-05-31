@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!-- TextView
+- TextView - use for display text  (static and dynamic)
+-->
+<TextView
+    android:id="@+id/tvTitle"
+    style="@style/TextStyle.Large.Bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:text="@string/large_string"
+    />
+
+<TextView
+    android:id="@+id/tvDes"
+    style="@style/TextStyle.Medium"
+    app:layout_constraintStart_toStartOf="@id/tvTitle"
+    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+    android:text="@string/medium_string"
+    />
+
+<TextView
+    android:id="@+id/tvNormal"
+    style="@style/TextStyle.Normal"
+    app:layout_constraintStart_toStartOf="@id/tvDes"
+    app:layout_constraintEnd_toEndOf="@id/tvDes"
+    app:layout_constraintTop_toBottomOf="@id/tvDes"
+    android:text="@string/medium_string"
+    />
+
+<!-- EditText
+- EditText - use for input text
+-->
+<EditText
+    android:id="@+id/editLarge"
+    style="@style/EditTextStyle.Large"
+    app:layout_constraintStart_toStartOf="@id/tvNormal"
+    app:layout_constraintEnd_toEndOf="@id/tvNormal"
+    app:layout_constraintTop_toBottomOf="@id/tvNormal"
+    android:hint="@string/enter_text"
+    />
+<EditText
+    android:id="@+id/editMedium"
+    style="@style/EditTextStyle.Medium"
+    android:hint="@string/enter_text"
+    app:layout_constraintStart_toStartOf="@id/editLarge"
+    app:layout_constraintEnd_toEndOf="@id/editLarge"
+    app:layout_constraintTop_toBottomOf="@id/editLarge"
+    />
+
+<EditText
+    android:id="@+id/editNormal"
+    style="@style/EditTextStyle.Medium"
+    android:hint="@string/enter_text"
+    app:layout_constraintStart_toStartOf="@id/editMedium"
+    app:layout_constraintEnd_toEndOf="@id/editMedium"
+    app:layout_constraintTop_toBottomOf="@id/editMedium"
+    />
+
+<!--Button - use for button for action
+-
+-->
+<Button
+    android:id="@+id/button1"
+    style="@style/ButtonStyle.Large.Bold"
+    android:text="@string/click_here"
+    app:layout_constraintStart_toStartOf="@id/editNormal"
+    app:layout_constraintEnd_toEndOf="@id/editNormal"
+    app:layout_constraintTop_toBottomOf="@id/editNormal"
+    />
+
+<Button
+    android:id="@+id/button2"
+    style="@style/ButtonStyle.Medium"
+    android:text="@string/click_here"
+    app:layout_constraintStart_toStartOf="@id/button1"
+    app:layout_constraintEnd_toEndOf="@id/button1"
+    app:layout_constraintTop_toBottomOf="@id/button1"
+    />
+
+<Button
+    android:id="@+id/button3"
+    style="@style/ButtonStyle.Normal"
+    android:text="@string/click_here"
+    app:layout_constraintStart_toStartOf="@id/button2"
+    app:layout_constraintEnd_toEndOf="@id/button2"
+    app:layout_constraintTop_toBottomOf="@id/button2"
+    />
+<CheckBox
+    android:id="@+id/check1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checked="true"
+    android:text="Question 1"
+    app:layout_constraintStart_toStartOf="@id/button3"
+    app:layout_constraintEnd_toEndOf="@id/button3"
+    app:layout_constraintTop_toBottomOf="@id/button3"
+    />
+<CheckBox
+    android:id="@+id/check2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checked="false"
+    android:text="Question 2"
+    app:layout_constraintStart_toStartOf="@id/check1"
+    app:layout_constraintEnd_toEndOf="@id/check1"
+    app:layout_constraintTop_toBottomOf="@id/check1"
+    />
+<CheckBox
+    android:id="@+id/check3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checked="false"
+    android:text="Question 3"
+    app:layout_constraintStart_toStartOf="@id/check2"
+    app:layout_constraintEnd_toEndOf="@id/check2"
+    app:layout_constraintTop_toBottomOf="@id/check2"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

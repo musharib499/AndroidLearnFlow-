@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WiproProjectForTraning</string>
+    <string name="tv_des">"acker factory blast in Punjab's Muktsar"</string>
+    <string name="simple_ui">Simple UI</string>
+    <string name="large_string">Large String</string>
+    <string name="medium_string">Medium String</string>
+    <string name="enter_text">Enter value here</string>
+    <string name="click_here">Click Here</string>
+    <string name="welcome_on_second_activity">Welcome on Second Activity</string>
+    <string name="go_back">Go Back</string>
+    <string name="go_next">Go next</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:paddingStart="10sp"
+    android:layout_height="match_parent">
+
+    <!--
+ - RelativeLayout - Arranges child views in a specific relative position.
+ - Gravity - Center, start, end, top, bottom, center_vertical, center_horizontal
+ - Layout_gravity - Center, start, end, top, bottom, center_vertical, center_horizontal
+ - @+id/ - it will create a new
+ - @id/ - it will not create a new
+ - layout_above - Place the view above another view
+ - layout_below - Place the view below another view
+ - layout_toLeftOf - Place the view to the left of another view
+ - layout_toRightOf - Place the view to the right of another view
+ - layout_alignParentBottom - Place the view at the bottom of the parent view
+ - layout_alignParentTop - Place the view at the top of the parent view
+ - layout_alignParentLeft - Place the view at the left of the parent view
+ - layout_alignParentRight - Place the view at the right of the parent view
+ - layout_centerInParent - Place the view in the center of the parent view
+ - layout_centerHorizontally - Place the view horizontally in the center of the parent view
+ - layout_centerVertically - Place the view vertically in the center of the parent view
+ - layout_marginRight - Set the right margin of the view
+ - layout_marginLeft - Set the left margin of the view
+ - layout_marginTop - Set the top margin of the view
+ - layout_marginBottom - Set the bottom margin of the view
+ - layout_marginStart - Set the start margin of the view
+ - layout_marginEnd - Set the end margin of the view
+ - layout_width - Set the width of the view
+ - layout_height - Set the height of the view
+ -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today News"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:textSize="20sp"
+        android:textColor="@color/purple_500"
+        android:text="@string/tv_des"
+
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvDescription"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/tvDescription"
+        android:layout_alignTop="@id/tvDescription"
+        android:backgroundTint="@color/purple_500"
+        android:text="Click Here"
+        android:textSize="40sp" />
+
+
+
+</RelativeLayout>

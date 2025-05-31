@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ConstraintLayout - What is ConstraintLayout?
+- ConstraintLayout is a powerful and flexible ViewGroup that allow you to design flat, complex UI layout without nesting multiple views or layout.
+- Design flat hierarchy of views.
+- Complex UI layout without nesting multiple views or layout.
+- ConstraintLayout - work on all child of parent with help of constraint set (position)
+- Easy to make UIs that work well on multiple screen
+- Position views related to each other using constraints.
+- Rules con Constraint layout
+- If you need to define at least two constrain
+- Attributs
+- app:layout_constraintTop_toTopOf	Top of view to top of another view/parent
+- app:layout_constraintTop_toBottomOf	Top of view to bottom of another view
+- app:layout_constraintTop_toLeftOf	Top of view to left of another view
+- app:layout_constraintTop_toRightOf	Top of view to right of another view
+- app:layout_constraintBottom_toTopOf	Bottom of view to top of another view
+- app:layout_constraintBottom_toBottomOf	Bottom of view to bottom of another view
+- app:layout_constraintBottom_toLeftOf	Bottom of view to left of another view
+- app:layout_constraintBottom_toRightOf	Bottom of view to right of another view
+- app:layout_constraintLeft_toLeftOf	Left of view to left of another view
+- app:layout_constraintLeft_toTopOf	Left of view to top of another view
+- app:layout_constraintLeft_toBottomOf	Left of view to bottom of another view
+- app:layout_constraintRight_toRightOf	Right of view to right of another view
+- app:layout_constraintRight_toTopOf	Right of view to top of another view
+- app:layout_constraintRight_toBottomOf	Right of view to bottom of another view
+- app:layout_constraintStart_toStartOf	Start of view to start of another view
+- app:layout_constraintStart_toTopOf	Start of view to top of another view
+- app:layout_constraintStart_toBottomOf	Start of view to bottom of another view
+- app:layout_constraintEnd_toEndOf	End of view to end of another view
+- app:layout_constraintEnd_toTopOf	End of view to top of another view
+- app:layout_constraintEnd_toBottomOf	End of view to bottom of another view
+- app:layout_constraintHorizontal_bias	Horizontal bias of view
+- app:layout_constraintVertical_bias	Vertical bias of view
+- Chains (group of views)
+- app:layout_constraintHorizontal_chainStyle	Horizontal chain style
+- spread (default) - views are evenly distributed horizontally
+- packed - views are packed together
+- spread_inside - First and last view stick to parent edge and other views are distributed evenly
+-->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:text="Hello"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/tvDes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:gravity="right"
+        android:text="Bye"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvMid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:text="Mid"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDes"
+        app:layout_constraintEnd_toStartOf="@id/tvDes"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+    <!-- Chain group-->
+    <!-- Button 1 -->
+    <!--Horizontal chainstyle-->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:text="Btn 1"
+        app:layout_constraintEnd_toStartOf="@id/button2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- Button 2 -->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:text="Btn 2"
+        app:layout_constraintEnd_toStartOf="@id/button3"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toTopOf="@id/button1" />
+
+    <!-- Button 3 -->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="Btn 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toTopOf="@id/button2" />
+
+    <!-- Vertical chain styling-->
+    <Button
+        android:id="@+id/vButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button1"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toTopOf="@+id/vButton2"
+        app:layout_constraintStart_toStartOf="@id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <Button
+        android:id="@+id/vButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button2"
+        android:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/vButton3"
+        app:layout_constraintEnd_toEndOf="@id/vButton1"
+        app:layout_constraintStart_toStartOf="@id/vButton1"
+        app:layout_constraintTop_toBottomOf="@+id/vButton1" />
+
+    <Button
+        android:id="@+id/vButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button3"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toTopOf="@id/vButton4"
+        app:layout_constraintEnd_toEndOf="@id/vButton2"
+        app:layout_constraintStart_toStartOf="@id/vButton2"
+        app:layout_constraintTop_toBottomOf="@+id/vButton2" />
+
+    <Button
+        android:id="@+id/vButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button4"
+        android:backgroundTint="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vButton2"
+        app:layout_constraintStart_toStartOf="@id/vButton3"
+        app:layout_constraintTop_toBottomOf="@+id/vButton3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--android:Theme.Material.Light.NoActionBar ->  Theme.AppCompat.Light.NoActionBar -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#03DAC5</item>
+    </style>
+
+    <style name="TextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+    </style>
+
+    <style name="TextStyle.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextStyle.Large.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Normal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="TextStyle.Normal.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="TextStyle.Medium.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Edit Text Style -->
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:radius">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:background">@drawable/edittext_background</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="EditTextStyle.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="EditTextStyle.Large.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EditTextStyle.Normal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="EditTextStyle.Normal.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EditTextStyle.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="EditTextStyle.Medium.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="ButtonStyle.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="ButtonStyle.Large.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonStyle.Normal">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="ButtonStyle.Normal.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonStyle.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="ButtonStyle.Medium.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+</resources>

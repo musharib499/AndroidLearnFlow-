@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+- Whats is FrameLayout?
+- FrameLayout - is one of the simplest and most basic ViewGroup in android -
+- It is designed to display a single child view but also contains multiple children views.
+- Each child overlaps the previous one.
+- like Stack
+- FrameLayout - Attributes
+- android:layout_width - wrap_content, match_parent
+- android:layout_height - wrap_content, match_parent
+- android:layout_gravity - center, start, end, top, bottom, center_vertical, center_horizontal
+- android:layout_margin - top, bottom, start, end
+- android:layout_marginStart - start
+- android:layout_marginEnd - end
+- android:layout_marginTop - top
+- android:layout_marginBottom - bottom
+- android:padding - top, bottom, start, end
+- android:paddingStart - start
+- android:paddingEnd - end
+- android:paddingTop - top
+- android:paddingBottom - bottom
+-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_background"/>
+    <TextView
+        android:id="@+id/c"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/tv_des"
+        android:gravity="center"
+        android:textSize="40sp"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/b"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="B"-->
+<!--        android:gravity="center"-->
+<!--        android:background="@color/purple_500"-->
+<!--        android:textSize="40sp"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/a"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="A"-->
+<!--        android:gravity="center"-->
+<!--        android:background="@color/purple_200"-->
+<!--        android:textSize="40sp"-->
+<!--        />-->
+
+
+
+
+</FrameLayout>
+
