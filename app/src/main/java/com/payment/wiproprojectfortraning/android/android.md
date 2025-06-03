@@ -16,3 +16,5 @@
  # ------- How can build dynamic data in list format 
  # ------- What is requirement to building dynamic data?
 #----------- 1- RecyclerView (XML), 2- Adapter, 3- ViewHolder, 4- LayoutManager, 5- Data Class, Activity 
+
+# Glide - Glide is library for using to image loading..https://github.com/bumptech/glide 

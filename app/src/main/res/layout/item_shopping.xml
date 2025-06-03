@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView style="@style/CardStyle.color"
-    xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
-        android:id="@+id/tvName"
-        style="@style/TextStyle.Medium.Bold"
-        android:layout_width="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnAdd"
-        tools:text = "Product Name"
-        />
-    <Button
-        android:id="@+id/btnAdd"
-        style="@style/ButtonStyle"
-        android:layout_marginTop="0dp"
-        app:layout_constraintTop_toTopOf="@id/tvName"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/add_to_card"
-        />
-    <TextView
-        style="@style/TextStyle.Normal"
-        android:id="@+id/tvPrice"
-        android:layout_width="0dp"
-        app:layout_constraintStart_toStartOf="@id/tvName"
-        app:layout_constraintTop_toBottomOf="@id/tvName"
-        app:layout_constraintEnd_toStartOf="@id/btnAdd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:text = "$45456 - $65765767"
-        />
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardStyle.color">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageId"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/TextStyle.Medium.Bold"
+            android:layout_width="0dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintEnd_toStartOf="@id/btnAdd"
+            app:layout_constraintStart_toEndOf="@id/imageId"
+            app:layout_constraintTop_toTopOf="@id/imageId"
+            tools:text="Product Name" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="0dp"
+            android:text="@string/add_to_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvName" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/TextStyle.Normal"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="$45456 - $65765767" />
+
+
+        <TextView
+            android:id="@+id/tvDes"
+            style="@style/TextStyle.Normal.Color.Gary"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/tvPrice"
+            app:layout_constraintStart_toStartOf="@id/tvPrice"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            tools:text="$45456 - $65765767" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

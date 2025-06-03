@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt") // added new kapt plugin
+    id("kotlin-parcelize")
 }
 
 android {
@@ -55,6 +57,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.appcompat)
     implementation(libs.gson) // added new gson dependency
+    implementation(libs.glide) // added new glide dependency
+    kapt(libs.glide.compiler) // added new glide compiler dependency
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
