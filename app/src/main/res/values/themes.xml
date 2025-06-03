@@ -18,6 +18,12 @@
     <style name="TextStyle.Large">
         <item name="android:textSize">@dimen/text_size_large</item>
     </style>
+    <style name="TextStyle.Large.Color">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextStyle.Large.Color.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
 
     <style name="TextStyle.Large.Bold">
         <item name="android:textStyle">bold</item>
@@ -30,6 +36,16 @@
     <style name="TextStyle.Normal.Bold">
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="TextStyle.Normal.Color">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextStyle.Normal.Color.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextStyle.Normal.Color.Gary">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
 
     <style name="TextStyle.Medium">
         <item name="android:textSize">@dimen/text_size_medium</item>
@@ -37,6 +53,12 @@
 
     <style name="TextStyle.Medium.Bold">
         <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextStyle.Medium.Color">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextStyle.Medium.Color.White">
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <!-- Edit Text Style -->
@@ -118,6 +140,17 @@
     </style>
 
 
+
+<!-- ##################################Card Style ######################################## -->
+    <style name="CardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">10dp</item>
+        <item name="cardBackgroundColor">@color/purple_500</item>
+        <item name="cardElevation">5dp</item>
+        <item name="contentPadding">8dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
 
 
 

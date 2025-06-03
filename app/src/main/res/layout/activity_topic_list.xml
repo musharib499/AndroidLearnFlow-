@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".android.learningTopic.adapter.TopicListActivity">
+    <!-- RecyclerView
+     - Showing dynamic data no of items in list  or large set of data can we show scrollable list or grid
+     - layoutManager - LinearLayoutManager, GridLayoutManager, StaggeredGridLayoutManager
+      - Control how items are displayed in the RecyclerView
+      - Adapter - Provide data to the RecyclerView
+      - ViewHolder - Holds Reference to views for performance
+      - What is LinearLayoutManager? - Just display data in vertical or horizontal direction
+       - What is GridLayoutManager? - Display data in grid view or matrix view
+       - What is StaggeredGridLayoutManager? - Display data in staggered grid view or matrix view
+
+    -->
+    <TextView
+        android:id="@+id/tvTopicNameList"
+        style="@style/TextStyle.Large.Bold"
+        android:text="@string/learning_topic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tvTopicNameList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,4 +15,5 @@
 # - Android - XML - done
 # - Application and 
 # - Emulater  - GoTo - Right Side setting -> Device manager  + click -> click on + button add new device
+# - RecyclerView - 
 
