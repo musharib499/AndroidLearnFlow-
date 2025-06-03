@@ -57,7 +57,11 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.appcompat)
     implementation(libs.gson) // added new gson dependency
-    implementation(libs.glide) // added new glide dependency
+    implementation(libs.glide)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx) // added new glide dependency
     kapt(libs.glide.compiler) // added new glide compiler dependency
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

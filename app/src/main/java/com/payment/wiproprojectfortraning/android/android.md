@@ -18,3 +18,9 @@
 #----------- 1- RecyclerView (XML), 2- Adapter, 3- ViewHolder, 4- LayoutManager, 5- Data Class, Activity 
 
 # Glide - Glide is library for using to image loading..https://github.com/bumptech/glide 
+#  Fragment - What is fragment? 
+---------------- Fragments -- -------------------------------
+# - Fragment is a container for UI 
+# - Fragment is a part of Activity which is call as subpart of activity
+# - We can use multiple fragment in single activity
+# - Multiple Fragment can inflate in single activity

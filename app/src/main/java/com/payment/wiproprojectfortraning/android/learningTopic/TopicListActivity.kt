@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
 import com.payment.wiproprojectfortraning.android.activityLifecycle.MainActivity
 import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.ShoppingActivity
+import com.payment.wiproprojectfortraning.android.viewModelWithFragment.ShoppingActivityWithFragment
 
 class TopicListActivity : AppCompatActivity() {
     private var recyclerView: RecyclerView? = null
@@ -21,6 +22,12 @@ class TopicListActivity : AppCompatActivity() {
             2,
             "Recycler View or List dynamic item",
             "- Activity/Fragment Lifecycle, Adapter- ViewHolder - Layout- LayoutManager"
+        ),
+
+        TopicData(
+            3,
+            "Shopping List with Fragment and ViewModel",
+            "Fragment Lifecycle, Adapter- ViewHolder - Layout- LayoutManager"
         )
     )
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +57,9 @@ class TopicListActivity : AppCompatActivity() {
             }
             2 -> {
                 startActivity(Intent(this, ShoppingActivity::class.java))
+            }
+            3 -> {
+                startActivity(Intent(this, ShoppingActivityWithFragment::class.java))
             }
             else -> {
                 // startActivity(Intent(this, MainActivity::class.java))
