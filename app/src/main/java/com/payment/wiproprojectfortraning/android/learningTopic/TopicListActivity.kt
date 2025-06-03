@@ -7,10 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
-import com.payment.wiproprojectfortraning.android.MainActivity
+import com.payment.wiproprojectfortraning.android.activityLifecycle.MainActivity
+import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.ShoppingActivity
 
 class TopicListActivity : AppCompatActivity() {
     private var recyclerView: RecyclerView? = null
@@ -48,8 +48,11 @@ class TopicListActivity : AppCompatActivity() {
             1-> {
                 startActivity(Intent(this, MainActivity::class.java))
             }
+            2 -> {
+                startActivity(Intent(this, ShoppingActivity::class.java))
+            }
             else -> {
-                Toast.makeText(this, topicData.topicName, Toast.LENGTH_SHORT).show()
+                // startActivity(Intent(this, MainActivity::class.java))
             }
         }
     }

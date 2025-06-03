@@ -1,4 +1,4 @@
-package com.payment.wiproprojectfortraning.android
+package com.payment.wiproprojectfortraning.android.activityLifecycle
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.payment.wiproprojectfortraning.R
 
 /** Activity - What is activity? -- https://developer.android.com/reference/android/app/Activity

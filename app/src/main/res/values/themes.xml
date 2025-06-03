@@ -151,6 +151,9 @@
         <item name="contentPadding">8dp</item>
         <item name="android:layout_margin">5dp</item>
     </style>
+    <style name="CardStyle.color">
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
 
 
 
