@@ -11,6 +11,7 @@ data class Product(
     val imageUrl: String,
     val discountPrice: Double,
     val productDescription: String,
-    var isAdded: Boolean = false
+    var isAdded: Boolean = false,
+    var isFavorite: Boolean = false
 ) : Parcelable
 

@@ -13,4 +13,6 @@ class ShoppingViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val btnAdd = view.findViewById<Button>(R.id.btnAdd)
     val imageId = view.findViewById<ImageView>(R.id.imageId)
     val tvDes = view.findViewById<TextView>(R.id.tvDes)
+    val imgFav = view.findViewById<ImageView>(R.id.imgFav)
+
 }

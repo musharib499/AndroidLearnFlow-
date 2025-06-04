@@ -14,4 +14,7 @@
     <string name="go_to_in_card_section">Go To in Card Section</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="total_amount">Total Amount : </string>
+    <string name="total_item">Total Item :</string>
+    <string name="amount">₹ %s</string>
 </resources>

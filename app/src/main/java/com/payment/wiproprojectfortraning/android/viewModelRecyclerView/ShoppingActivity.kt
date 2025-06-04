@@ -16,7 +16,7 @@ class ShoppingActivity : AppCompatActivity() {
     private val recyclerView: RecyclerView by lazy { findViewById(R.id.recyclerView) }
     private val btnGoToCard: Button by lazy { findViewById(R.id.btnGoToCard) }
     private val adapter: ShoppingAdapter by lazy {
-        ShoppingAdapter(emptyList()) {
+        ShoppingAdapter(this,emptyList(), {}) {
             it?.let { item ->
                 if (item.isAdded) {
                     shoppingViewModel.removeItem(item)

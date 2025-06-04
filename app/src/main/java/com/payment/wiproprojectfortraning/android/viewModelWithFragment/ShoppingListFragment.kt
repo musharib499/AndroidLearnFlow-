@@ -1,7 +1,5 @@
 package com.payment.wiproprojectfortraning.android.viewModelWithFragment
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,30 +10,31 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
 import com.payment.wiproprojectfortraning.android.addFragment
-import com.payment.wiproprojectfortraning.android.replaceFragment
 import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.ShoppingAdapter
-import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.ShoppingDetailsActivity
 
 class ShoppingListFragment : Fragment() {
-    private val viewModel:ShoppingFragmentViewModel by lazy { ViewModelProvider(requireActivity())[ShoppingFragmentViewModel::class.java] }
-   private var recyclerView: RecyclerView?= null
-    private var btnGoToCard: Button?= null
+    private val viewModel: ShoppingFragmentViewModel by lazy { ViewModelProvider(requireActivity())[ShoppingFragmentViewModel::class.java] }
+    private var recyclerView: RecyclerView? = null
+    private var btnGoToCard: Button? = null
     private val adapter: ShoppingAdapter by lazy {
-        ShoppingAdapter(emptyList()) {
+        ShoppingAdapter(this.requireContext(), emptyList(),{
+            viewModel.markAsFavorite(it)
+        }) {
             it?.let { item ->
                 if (item.isAdded) {
                     viewModel.removeItem(item)
-                }else {
-                  viewModel.addItem(item)
-                  }
+                } else {
+                    viewModel.addItem(item)
                 }
             }
+        }
     }
+
     companion object {
         fun newInstance(): ShoppingListFragment {
             val fragment = ShoppingListFragment()
             return fragment
-    }
+        }
     }
 
     override fun toString(): String {
@@ -71,7 +70,11 @@ class ShoppingListFragment : Fragment() {
         }
 
         btnGoToCard?.setOnClickListener {
-            this.activity?.addFragment(R.id.fragmentContainer,ShoppingAddCardListFragment.newInstance(),true)
+            this.activity?.addFragment(
+                R.id.fragmentContainer,
+                ShoppingAddCardListFragment.newInstance(),
+                true
+            )
         }
 
     }

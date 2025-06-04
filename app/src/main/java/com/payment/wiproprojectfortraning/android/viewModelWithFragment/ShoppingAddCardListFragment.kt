@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
@@ -21,8 +22,10 @@ class ShoppingAddCardListFragment : Fragment() {
     private val viewModel:ShoppingFragmentViewModel by lazy { ViewModelProvider(requireActivity())[ShoppingFragmentViewModel::class.java] }
     private var recyclerView: RecyclerView?= null
     private var btnGoToCard: Button?= null
+    private var totalAmount: TextView?= null
+    private var totalItem: TextView?= null
     private val adapter: ShoppingAdapter by lazy {
-        ShoppingAdapter(emptyList()) {
+        ShoppingAdapter(this.requireContext(),emptyList(),{viewModel.markAsFavorite(it)}) {
             it?.let { item ->
                 if (item.isAdded) {
                     viewModel.removeItem(item)
@@ -64,12 +67,22 @@ class ShoppingAddCardListFragment : Fragment() {
     private fun initViewItem(view: View?) {
         recyclerView = view?.findViewById(R.id.recyclerView)
         btnGoToCard = view?.findViewById(R.id.btnGoToCard)
+        totalAmount = view?.findViewById(R.id.tvTotalAmount)
+        totalItem = view?.findViewById(R.id.tvTotalCount)
 
         recyclerView?.adapter = adapter
 
         viewModel.products.observe(viewLifecycleOwner) { updatedList ->
             adapter.updateList(updatedList.filter { it.isAdded })
         }
+        viewModel.totalAmount.observe(viewLifecycleOwner) {
+            totalAmount?.text = resources.getString(R.string.amount,"${it}")
+        }
+
+        viewModel.totalItem.observe(viewLifecycleOwner) {
+            totalItem?.text = resources.getString(R.string.amount,"${it}")
+        }
+
 
         btnGoToCard?.setOnClickListener {
         }

@@ -31,6 +31,7 @@ class ShoppingActivityWithFragment : AppCompatActivity() {
     fun initView(){
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Shopping"
         replaceFragment(R.id.fragmentContainer,ShoppingListFragment.newInstance(),false)
 
     }

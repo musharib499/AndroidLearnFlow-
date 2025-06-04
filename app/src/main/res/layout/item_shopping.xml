@@ -19,10 +19,23 @@
             style="@style/TextStyle.Medium.Bold"
             android:layout_width="0dp"
             android:layout_marginStart="10dp"
-            app:layout_constraintEnd_toStartOf="@id/btnAdd"
+            app:layout_constraintEnd_toStartOf="@id/imgFav"
             app:layout_constraintStart_toEndOf="@id/imageId"
             app:layout_constraintTop_toTopOf="@id/imageId"
             tools:text="Product Name" />
+
+        <ImageButton
+            android:id="@+id/imgFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_favorite"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toStartOf="@id/btnAdd"
+            app:layout_constraintStart_toEndOf="@id/tvName"
+            app:layout_constraintTop_toTopOf="@id/tvName" />
 
         <Button
             android:id="@+id/btnAdd"
@@ -34,9 +47,9 @@
 
         <TextView
             android:id="@+id/tvPrice"
-            style="@style/TextStyle.Normal"
+            style="@style/TextStyle.Normal.Bold"
             android:layout_width="0dp"
-            app:layout_constraintEnd_toEndOf="@id/tvName"
+            app:layout_constraintEnd_toStartOf="@id/btnAdd"
             app:layout_constraintStart_toStartOf="@id/tvName"
             app:layout_constraintTop_toBottomOf="@id/tvName"
             tools:text="$45456 - $65765767" />
