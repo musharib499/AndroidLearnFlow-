@@ -2,19 +2,25 @@ package com.payment.wiproprojectfortraning.android.learningTopic
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.semantics.SemanticsProperties.Selected
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
 import com.payment.wiproprojectfortraning.android.activityLifecycle.MainActivity
+import com.payment.wiproprojectfortraning.android.getStringValue
+import com.payment.wiproprojectfortraning.android.saveStringValue
 import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.ShoppingActivity
 import com.payment.wiproprojectfortraning.android.viewModelWithFragment.ShoppingActivityWithFragment
 
+const val KEY_ITEM_SEECTED = "KEY_ITEM_SEECTED"
 class TopicListActivity : AppCompatActivity() {
     private var recyclerView: RecyclerView? = null
+    private val textTopic:TextView by lazy { findViewById(R.id.tvTopicNameList) }
 
     private val topicList = listOf(
         TopicData(1, "Activity Lifecycle and How to Move to Next Screen", "Activity Lifecycle"),
@@ -48,9 +54,17 @@ class TopicListActivity : AppCompatActivity() {
             adapter = TopicAdapter(topicList, {onItemClicked(it)})
            // layoutManager = LinearLayoutManager(this@TopicListActivity)
         }
+
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        textTopic.text =  "Previous Selectde item => ${getStringValue(KEY_ITEM_SEECTED)?: "Not Selected any Item"}"
     }
 
     fun onItemClicked(topicData: TopicData) {
+        saveStringValue(KEY_ITEM_SEECTED, topicData.topicName)
         when (topicData.topicId) {
             1-> {
                 startActivity(Intent(this, MainActivity::class.java))

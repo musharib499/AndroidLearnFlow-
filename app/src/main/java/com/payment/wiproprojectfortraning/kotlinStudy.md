@@ -16,4 +16,10 @@
 # - Application and 
 # - Emulater  - GoTo - Right Side setting -> Device manager  + click -> click on + button add new device
 # - RecyclerView - 
+# - Shopping Card demo done
+# - How can save data in local -- SharedPreference
+# - What is SharedPreference?
+---- It use to save data in local
+---- SharedPreference is a key value pair (key and value)
+---- we need to define key store    
 

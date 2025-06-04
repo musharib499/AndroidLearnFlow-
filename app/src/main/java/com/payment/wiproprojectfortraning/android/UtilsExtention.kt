@@ -1,9 +1,13 @@
 package com.payment.wiproprojectfortraning.android
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.replace
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.Product
 
 
 /**
@@ -18,17 +22,14 @@ import androidx.fragment.app.replace
  */
 
 fun FragmentActivity.replaceFragment(
-    container: Int,
-    fragment:Fragment,
-    addToBackStack:Boolean = true
+    container: Int, fragment: Fragment, addToBackStack: Boolean = true
 
-){
-    val transaction = supportFragmentManager.beginTransaction()
-        .replace(container,fragment)
-      if(addToBackStack){
-          transaction.addToBackStack(fragment::class.java.simpleName)
+) {
+    val transaction = supportFragmentManager.beginTransaction().replace(container, fragment)
+    if (addToBackStack) {
+        transaction.addToBackStack(fragment::class.java.simpleName)
 
-      }
+    }
     transaction.commit()
 }
 
@@ -43,16 +44,42 @@ Returns the same FragmentTransaction instance.
  * */
 
 fun FragmentActivity.addFragment(
-    container: Int,
-    fragment:Fragment,
-    addToBackStack:Boolean = true
+    container: Int, fragment: Fragment, addToBackStack: Boolean = true
 
-){
-    val transaction = supportFragmentManager.beginTransaction()
-        .add(container,fragment)
-    if(addToBackStack){
+) {
+    val transaction = supportFragmentManager.beginTransaction().add(container, fragment)
+    if (addToBackStack) {
         transaction.addToBackStack(fragment::class.java.simpleName)
 
     }
     transaction.commit()
+}
+
+///
+
+fun Context.saveProductList(key: String, value: List<Product>) {
+    val gson = Gson()
+    val json = gson.toJson(value) // Convert the list to JSON string
+    getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE)
+        .edit()
+        .putString(key, json)
+        .apply()
+}
+
+fun Context.getProductList(key: String): List<Product>? {
+    val gson = Gson()
+    val response = getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE)
+        .getString(key,null)
+    return gson.fromJson(response, object : TypeToken<List<Product>>() {}.type)
+}
+
+fun Context.saveStringValue(key: String, value: String) {
+    getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE)
+        .edit()
+        .putString(key, value)
+        .apply()
+}
+
+fun Context.getStringValue(key: String):String? {
+    return  getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE).getString(key,null)
 }

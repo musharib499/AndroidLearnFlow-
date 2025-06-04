@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
@@ -60,6 +61,7 @@ class ShoppingListFragment : Fragment() {
 
 
     private fun initViewItem(view: View?) {
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Shopping List"
         recyclerView = view?.findViewById(R.id.recyclerView)
         btnGoToCard = view?.findViewById(R.id.btnGoToCard)
 

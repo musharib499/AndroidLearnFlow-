@@ -10,8 +10,11 @@
     <style name="StyleToolBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">50dp</item>
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="android:background">@color/purple_500</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="iconTint">@color/white</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:fontFamily">sans-serif-condensed-medium</item>
     </style>

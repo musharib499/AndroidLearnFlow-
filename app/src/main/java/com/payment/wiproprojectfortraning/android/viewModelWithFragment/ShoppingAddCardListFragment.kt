@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
@@ -65,6 +66,7 @@ class ShoppingAddCardListFragment : Fragment() {
 
 
     private fun initViewItem(view: View?) {
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Shopping Card List "
         recyclerView = view?.findViewById(R.id.recyclerView)
         btnGoToCard = view?.findViewById(R.id.btnGoToCard)
         totalAmount = view?.findViewById(R.id.tvTotalAmount)

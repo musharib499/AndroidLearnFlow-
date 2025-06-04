@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".android.learningTopic.adapter.TopicListActivity">
+    android:layout_height="match_parent">
     <!-- RecyclerView
      - Showing dynamic data no of items in list  or large set of data can we show scrollable list or grid
      - layoutManager - LinearLayoutManager, GridLayoutManager, StaggeredGridLayoutManager
@@ -19,7 +18,7 @@
     -->
     <TextView
         android:id="@+id/tvTopicNameList"
-        style="@style/TextStyle.Large.Bold"
+        style="@style/TextStyle.Medium"
         android:text="@string/learning_topic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

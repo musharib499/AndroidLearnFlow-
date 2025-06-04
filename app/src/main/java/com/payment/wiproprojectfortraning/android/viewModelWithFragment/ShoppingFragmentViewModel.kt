@@ -18,6 +18,17 @@ class ShoppingFragmentViewModel : ViewModel() {
 
     init {
         _products.value = productList
+        updateTotal()
+    }
+    fun setProductList(list: List<Product>?) {
+        list?.let {
+            _products.value = it
+        }?:run {
+            _products.value = productList
+        }
+
+        updateTotal()
+
     }
 
     fun addItem(product: Product) {
