@@ -34,7 +34,7 @@ class ShoppingDetailsActivity : AppCompatActivity() {
    private fun  initView() {
         val product = intent.getParcelableArrayListExtra<Product>("product")?.toList()
         recyclerView.apply {
-            adapter = ShoppingAdapter(product,{})
+            adapter = ShoppingAdapter(this.context,product,{},{})
         }
         btnGoToCard.setOnClickListener {
             finish()

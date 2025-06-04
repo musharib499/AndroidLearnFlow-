@@ -16,6 +16,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".android.viewModelWithFragment.ShoppingActivityWithFragment"
+            android:exported="false" />
+        <activity
             android:name=".android.viewModelRecyclerView.ShoppingDetailsActivity"
             android:exported="false" />
         <activity
