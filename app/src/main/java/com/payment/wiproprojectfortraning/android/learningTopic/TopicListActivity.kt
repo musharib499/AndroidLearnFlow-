@@ -50,6 +50,11 @@ class TopicListActivity : AppCompatActivity() {
             5,
             "Compose Screen",
             "Implement compose"
+        ),
+        TopicData(
+            6,
+            "Compose Screen",
+            "Implement compose"
         )
 
 

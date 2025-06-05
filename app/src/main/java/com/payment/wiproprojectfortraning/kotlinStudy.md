@@ -22,4 +22,18 @@
 ---- It use to save data in local
 ---- SharedPreference is a key value pair (key and value)
 ---- we need to define key store    
-
+# - Demo is done
+# - IOS vs Android
+---  iOS
+- Apple
+- Language support - Swift, Objective C
+- For Ui Part - UIKit, SwiftUi, StoryBoard
+- Apple not open source
+--- Android
+- Develop by google
+- Language Support - Java, kotlin
+- Ui Part - XML, Compose
+- Android is open source
+- Android - google play store, samsung store, amazon store, huwai store
+- or We can deploy on open source app source 
+- 

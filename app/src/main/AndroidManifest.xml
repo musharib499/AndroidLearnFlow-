@@ -16,6 +16,9 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".android.userProfileList.UserProfileListActivity"
+            android:exported="false" />
+        <activity
             android:name=".android.compose.ComposeMainActivity"
             android:exported="false" />
         <activity
