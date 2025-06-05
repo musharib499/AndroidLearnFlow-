@@ -7,6 +7,7 @@
     >
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
+    android:minHeight="100dp"
     android:layout_height="wrap_content">
 
     <TextView
@@ -20,7 +21,7 @@
 
     <TextView
         android:id="@+id/tvDes"
-        style="@style/TextStyle.Normal.Color.Gary"
+        style="@style/TextStyle.Medium.Color.Gary"
         android:layout_width="0dp"
         app:layout_constraintEnd_toEndOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="@id/tvTitle"

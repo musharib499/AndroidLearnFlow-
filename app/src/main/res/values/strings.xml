@@ -17,4 +17,11 @@
     <string name="total_amount">Total Amount : </string>
     <string name="total_item">Total Item :</string>
     <string name="amount">₹ %s</string>
+    <string name="edit_profile">EDIT Profile</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_email">Enter email</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
 </resources>
