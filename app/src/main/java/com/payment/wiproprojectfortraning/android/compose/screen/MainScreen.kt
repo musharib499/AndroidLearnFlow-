@@ -52,7 +52,12 @@ fun ComposeMainScreen() {
         Text("Welcome to compose8", style = MaterialTheme.typography.titleLarge);
         Spacer(modifier = Modifier.padding(10.dp))
         Text(name, style = MaterialTheme.typography.titleLarge);
-
+        TextField(
+            value = name,
+            onValueChange = {name = it},
+            label = {Text("Name")},
+            modifier = Modifier.padding(10.dp)
+        )
 
     }
 }
