@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.payment.wiproprojectfortraning.R
 import com.payment.wiproprojectfortraning.android.activityLifecycle.MainActivity
+import com.payment.wiproprojectfortraning.android.compose.ComposeMainActivity
 import com.payment.wiproprojectfortraning.android.getStringValue
 import com.payment.wiproprojectfortraning.android.saveStringValue
 import com.payment.wiproprojectfortraning.android.userProfile.UserProfileActivity
@@ -43,6 +44,14 @@ class TopicListActivity : AppCompatActivity() {
             "User Profile",
             "Using - Activity-fragment-viewmodel-sharedpreference-dataclass"
         )
+        ,
+
+        TopicData(
+            5,
+            "Compose Screen",
+            "Implement compose"
+        )
+
 
     )
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,6 +95,9 @@ class TopicListActivity : AppCompatActivity() {
             }
             4 -> {
                 startActivity(Intent(this, UserProfileActivity::class.java))
+            }
+            5 -> {
+                startActivity(Intent(this, ComposeMainActivity::class.java))
             }
             else -> {
                 // startActivity(Intent(this, MainActivity::class.java))
