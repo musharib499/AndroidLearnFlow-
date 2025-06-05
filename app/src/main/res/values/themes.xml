@@ -5,11 +5,14 @@
         <item name="colorPrimary">#6200EE</item>
         <item name="colorPrimaryDark">#3700B3</item>
         <item name="colorAccent">#03DAC5</item>
+        <item name="android:statusBarColor">@color/purple_500</item>
     </style>
 
     <style name="StyleToolBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">50dp</item>
+        <!--Toolbar icon color chane-->
+        <item name="colorControlNormal">@color/white</item>
         <item name="android:background">@color/purple_500</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
@@ -78,6 +81,9 @@
 
     <style name="TextStyle.Medium.Color.White">
         <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextStyle.Medium.Color.Gary">
+        <item name="android:textColor">@color/gray</item>
     </style>
 
     <!-- Edit Text Style -->
@@ -172,6 +178,18 @@
 
     <style name="CardStyle.color">
         <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+
+    <!--################################ TextInputLayout ####################################-->
+    <style name="TextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="boxStrokeColor">@color/purple_500</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
     </style>
 
 

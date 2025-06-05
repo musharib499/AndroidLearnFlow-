@@ -83,3 +83,19 @@ fun Context.saveStringValue(key: String, value: String) {
 fun Context.getStringValue(key: String):String? {
     return  getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE).getString(key,null)
 }
+
+fun Context.saveObject(key: String, obj: Any){
+    val gson = Gson()
+    val json = gson.toJson(obj)
+    getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE)
+        .edit()
+        .putString(key, json)
+        .apply()
+}
+inline fun <reified T> Context.getObject(key: String): T? {
+    val gson = Gson()
+    val response = getSharedPreferences(applicationInfo.name, Context.MODE_PRIVATE)
+        .getString(key,null)
+    return gson.fromJson(response, T::class.java)
+
+}

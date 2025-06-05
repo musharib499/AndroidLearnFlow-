@@ -14,6 +14,7 @@ import com.payment.wiproprojectfortraning.R
 import com.payment.wiproprojectfortraning.android.activityLifecycle.MainActivity
 import com.payment.wiproprojectfortraning.android.getStringValue
 import com.payment.wiproprojectfortraning.android.saveStringValue
+import com.payment.wiproprojectfortraning.android.userProfile.UserProfileActivity
 import com.payment.wiproprojectfortraning.android.viewModelRecyclerView.ShoppingActivity
 import com.payment.wiproprojectfortraning.android.viewModelWithFragment.ShoppingActivityWithFragment
 
@@ -35,6 +36,14 @@ class TopicListActivity : AppCompatActivity() {
             "Shopping List with Fragment and ViewModel",
             "Fragment Lifecycle, Adapter- ViewHolder - Layout- LayoutManager"
         )
+        ,
+
+        TopicData(
+            4,
+            "User Profile",
+            "Using - Activity-fragment-viewmodel-sharedpreference-dataclass"
+        )
+
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,6 +83,9 @@ class TopicListActivity : AppCompatActivity() {
             }
             3 -> {
                 startActivity(Intent(this, ShoppingActivityWithFragment::class.java))
+            }
+            4 -> {
+                startActivity(Intent(this, UserProfileActivity::class.java))
             }
             else -> {
                 // startActivity(Intent(this, MainActivity::class.java))
